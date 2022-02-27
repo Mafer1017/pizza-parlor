@@ -30,12 +30,12 @@
 
 - Test: "It should return a price when the user inputs a size."
 - Code: const myPizza = new Pizza("large", ["pepperoni", "pineapple"])
-myPizza.pizzaCost()
+- myPizza.pizzaCost()
 - Expected Output: 20
 ---
 - Test: "It should add cost to the pizza depending on the number of toppings added."
 - Code: const myPizza = new Pizza("large", ["pepperoni", "pineapple"])
-myPizza.pizzaCost()
+- myPizza.pizzaCost()
 - Expected Output: 22
 ---
 

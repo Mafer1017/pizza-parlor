@@ -1,8 +1,8 @@
-# Mr. Roboger's Neighborhood
+# Pizza Parlor
 
 ##### By: Marcus Ferreira
 
-#### An Application that replaces integers in an array with phrases
+#### A website that allows users to create pizzas and see the cost.
 
 ## Technologies Used
 
@@ -20,9 +20,9 @@
 
 #### Describe: Pizza()
 
-- Test:
-- Code: 
-- Expected Output:
+- Test: "It should return a Pizza object with two properties for size and toppings
+- Code: const myPizza = new Pizza("large", ["pepperoni", "pineapple"])
+- Expected Output: Pizza {size: 'large', toppings: ['pepperoni', 'pineapple'], cost: 0}
 ---
 #### Describe: changeValue()
 

@@ -33,9 +33,10 @@
 myPizza.pizzaCost()
 - Expected Output: 20
 ---
-- Test:
-- Code: 
-- Expected Output:
+- Test: "It should add cost to the pizza depending on the number of toppings added."
+- Code: const myPizza = new Pizza("large", ["pepperoni", "pineapple"])
+myPizza.pizzaCost()
+- Expected Output: 22
 ---
 
 ## License

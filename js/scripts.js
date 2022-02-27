@@ -13,10 +13,20 @@ Pizza.prototype.pizzaCost = function () {
     this.cost += 15;
   } else if (this.size === "large") {
     this.cost += 20;
-  }
+  }if(this.toppings.includes("pepperoni")) {
+    this.cost += 1;
+  };
+  if(this.toppings.includes("extra cheese")) {
+    this.cost += 1;
+  };
+  if(this.toppings.includes("olives")) {
+    this.cost += 1;
+  };
+  if(this.toppings.includes("pineapple")) {
+    this.cost += 1;
+  };    
   return this.cost;
 };
-
 
 // User Interface Logic ------
 

@@ -6,9 +6,11 @@
 
 ## Technologies Used
 
-* Javascript
-* HTML/CSS
+* HTML
+* CSS
 * Bootstrap
+* Javascript
+* jQuery
 
 ## Setup/Installation Requirements
 
@@ -24,11 +26,12 @@
 - Code: const myPizza = new Pizza("large", ["pepperoni", "pineapple"])
 - Expected Output: Pizza {size: 'large', toppings: ['pepperoni', 'pineapple'], cost: 0}
 ---
-#### Describe: changeValue()
+#### Describe: Pizza.prototype.pizzaCost
 
-- Test:
-- Code: 
-- Expected Output:
+- Test: "It should return a price when the user inputs a size."
+- Code: const myPizza = new Pizza("large", ["pepperoni", "pineapple"])
+myPizza.pizzaCost()
+- Expected Output: 20
 ---
 - Test:
 - Code: 

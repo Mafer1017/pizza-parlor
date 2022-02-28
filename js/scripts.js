@@ -6,6 +6,12 @@ function Pizza (size, toppings) {
   this.cost = 0;
 };
 
+let pizza1 = new Pizza();
+
+Pizza.prototype.newPizza = function () {
+  const pizzaInput = $("input#pieSize" + "input#toppings").val();
+}
+
 Pizza.prototype.pizzaCost = function () {
   if (this.size === "small") {
     this.cost += 12;
@@ -33,5 +39,10 @@ Pizza.prototype.pizzaCost = function () {
 $(document).ready(function() {
   $("form#pieSize").submit(function(event) {
     event.preventDefault();
+  });
+  $("form#toppings").submit(function(event){
+    event.preventDefault();
+    const outputTotal = newPizza.pizzaCost()
+    $("#show-result").text("Your Pizza will cost: $ " + outputTotal);
   });
 }); 

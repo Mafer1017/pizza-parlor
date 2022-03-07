@@ -43,12 +43,11 @@ Pizza.prototype.pizzaCost = function () {
 $(document).ready(function() {
   $("form#pizzaOptions").submit(function(event) {
     event.preventDefault();
-    let size = $('input[name=pieSize]:checked').val()
-    let toppings = $('input[name=topping]:checked').val()
-    });
+    let size = $('input:radio[name=pieSize]:checked').val()
+    let toppings = $('input:checkbox[name=topping]:checked').val()
     let newPizza = new Pizza(size, toppings)
     let price = newPizza.pizzaCost();
     $("button#submit").click(function() {
-    
-    $("#show-result").text("Your Pizza will cost: $ " + price);
+      $("#totalCost").text("Your Pizza will cost: $ " + price);
+    });
   });

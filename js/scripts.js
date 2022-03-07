@@ -6,7 +6,6 @@ function Pizza (size, toppings) {
   this.cost = 0;
 };
 
-let pizza1 = new Pizza();
 
 Pizza.prototype.newPizza = function () {
   const pizzaInput = $("input#pieSize" + "input#toppings").val();
@@ -22,7 +21,7 @@ Pizza.prototype.pizzaCost = function () {
   }if(this.toppings.includes("pepperoni")) {
     this.cost += 1;
   };
-  if(this.toppings.includes("extra cheese")) {
+  if(this.toppings.includes("extraCheese")) {
     this.cost += 1;
   };
   if(this.toppings.includes("olives")) {
@@ -30,7 +29,16 @@ Pizza.prototype.pizzaCost = function () {
   };
   if(this.toppings.includes("pineapple")) {
     this.cost += 1;
-  };    
+  };
+  if(this.toppings.includes("peppercinis")) {
+    this.cost += 1;
+  };     
+  if(this.toppings.includes("sausage")) {
+    this.cost += 1;
+  };
+  if(this.toppings.includes("jalapenos")) {
+    this.cost += 1;
+  };
   return this.cost;
 };
 

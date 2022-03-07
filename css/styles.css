@@ -1,4 +1,27 @@
+body {
+  background-color: rgb(235, 134, 134);
+}
 h2 {
   text-align: center;
-  color: red;
+  color: rgb(255, 255, 255);
+}
+
+h5 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.crust {
+  border: 2px solid green;
+  padding: 10px;
+}
+
+.checkbox {
+  border: 2px solid green;
+  padding: 10px;
+}
+
+.submitCost {
+color: rgb(255, 255, 255);
+font-weight: bold;
 }

@@ -9,10 +9,12 @@
 </head>
 <body>
   <h2>Welcome to Joey's Stinky Pizzas!</h2>
-  <div class ="container">
-    <div class = "row">
+  <div class="container">
+    <div class="row">
       <div class="col-md-4">
         <form id="pizzaOptions">
+          <div class="crust">
+            <h5>Choose Your Pizza</h5>
           <div class="radio">
             <label>
               <input type="radio" name="pieSize" value="large">Large
@@ -27,29 +29,30 @@
             <label>
               <input type="radio" name="pieSize" value="small">Small
             </label>
+            </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="checkbox">
-            <div id="toppings" class="col-md-6">
-              <h5>Add Your Toppings!</h5>
-              <label><input type="checkbox" name="topping" value="pepperoni"> Pepperoni</label><br>
-              <label><input type="checkbox" name="topping" value="extraCheese"> Extra Cheese</label><br>
-              <label><input type="checkbox" name="topping" value="pineapple"> Pineapple</label><br>
-              <label><input type="checkbox" name="topping" value="olives"> Olives</label><br>
-              <label><input type="checkbox" name="topping" value="peppercinis"> Peppercinis</label><br>
-              <label><input type="checkbox" name="topping" value="sausage"> Italian Sausage</label><br>
-              <label><input type="checkbox" name="topping" value="spinach"> Spinach</label><br>
-              <label><input type="checkbox" name="topping" value="jalapenos"> Jalapeños</label>
-            </div>
+        <div class="checkbox">
+          <div id="toppings" class="col-md-6">
+            <h5>Add Your Toppings!</h5>
+            <label><input type="checkbox" name="topping" value="pepperoni"> Pepperoni</label><br>
+            <label><input type="checkbox" name="topping" value="extraCheese"> Extra Cheese</label><br>
+            <label><input type="checkbox" name="topping" value="pineapple"> Pineapple</label><br>
+            <label><input type="checkbox" name="topping" value="olives"> Olives</label><br>
+            <label><input type="checkbox" name="topping" value="peppercinis"> Peppercinis</label><br>
+            <label><input type="checkbox" name="topping" value="sausage"> Italian Sausage</label><br>
+            <label><input type="checkbox" name="topping" value="spinach"> Spinach</label><br>
+            <label><input type="checkbox" name="topping" value="jalapenos"> Jalapeños</label>
           </div>
-          <button id="submit" class="btn btn-warning">Finish Pizza</button>
-          <div id="show-result">
-          <p>Your Pizza costs: <span class="totalCost"></span></p>
-          </div>
-        </form>
-      </div>
+        </div>
+        </div>
+      </form>
     </div>
+    <button id="submit" class="btn btn-warning">Finish Pizza</button>
+      <div id="show-result">
+      <p class="submitCost" >Your Pizza costs: <span class="totalCost"></span></p>
+      </div>
   </div>
 </body>
 </html>

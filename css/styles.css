@@ -8,17 +8,19 @@ h2 {
 
 h5 {
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(48, 216, 48);
 }
 
 .crust {
   border: 2px solid green;
   padding: 10px;
+  background-color: white;
 }
 
 .checkbox {
   border: 2px solid green;
   padding: 10px;
+  background-color: white;
 }
 
 .submitCost {

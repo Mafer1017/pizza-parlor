@@ -14,28 +14,9 @@ Pizza.prototype.pizzaCost = function () {
     this.cost += 15;
   } else if (this.size === "large") {
     this.cost += 20;
-  }if(this.toppings.includes("pepperoni")) {
-    this.cost += 1;
   };
-  if(this.toppings.includes("extraCheese")) {
-    this.cost += 1;
-  };
-  if(this.toppings.includes("olives")) {
-    this.cost += 1;
-  };
-  if(this.toppings.includes("pineapple")) {
-    this.cost += 1;
-  };
-  if(this.toppings.includes("peppercinis")) {
-    this.cost += 1;
-  };     
-  if(this.toppings.includes("sausage")) {
-    this.cost += 1;
-  };
-  if(this.toppings.includes("jalapenos")) {
-    this.cost += 1;
-  };
-  return this.cost;
+  this.cost += this.toppings.length;
+  return this.cost
 };
 
 // User Interface Logic ------
@@ -44,10 +25,12 @@ $(document).ready(function() {
   $("form#pizzaOptions").submit(function(event) {
     event.preventDefault();
     let size = $('input:radio[name=pieSize]:checked').val()
-    let toppings = $('input:checkbox[name=topping]:checked').val()
-    let newPizza = new Pizza(size, toppings)
-    let price = newPizza.pizzaCost();
-    $("button#submit").click(function() {
-      $("#totalCost").text("Your Pizza will cost: $ " + price);
+    let selectedToppings = new Array();
+    $('input:checkbox[name=topping]:checked').each(function() {
+      selectedToppings.push(this.value);
     });
+    let newPizza = new Pizza(size, selectedToppings)
+    newPizza.pizzaCost();
+    $(".totalCost").text("$" + newPizza.cost);
   });
+});

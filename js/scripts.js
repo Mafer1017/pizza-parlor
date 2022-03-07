@@ -1,15 +1,11 @@
-// Business Logic
+// Business Logic ------
+
 
 function Pizza (size, toppings) {
   this.size = size;
   this.toppings = toppings;
   this.cost = 0;
 };
-
-
-Pizza.prototype.newPizza = function () {
-  const pizzaInput = $("input#pieSize" + "input#toppings").val();
-}
 
 Pizza.prototype.pizzaCost = function () {
   if (this.size === "small") {
@@ -45,12 +41,14 @@ Pizza.prototype.pizzaCost = function () {
 // User Interface Logic ------
 
 $(document).ready(function() {
-  $("form#pieSize").submit(function(event) {
+  $("form#pizzaOptions").submit(function(event) {
     event.preventDefault();
+    let size = $('input[name=pieSize]:checked').val()
+    let toppings = $('input[name=topping]:checked').val()
+    });
+    let newPizza = new Pizza(size, toppings)
+    let price = newPizza.pizzaCost();
+    $("button#submit").click(function() {
+    
+    $("#show-result").text("Your Pizza will cost: $ " + price);
   });
-  $("form#toppings").submit(function(event){
-    event.preventDefault();
-    const outputTotal = newPizza.pizzaCost()
-    $("#show-result").text("Your Pizza will cost: $ " + outputTotal);
-  });
-}); 
